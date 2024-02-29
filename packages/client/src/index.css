@@ -1,0 +1,109 @@
+@layer reset;
+@layer theme;
+@layer base;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap');
+
+@layer base {
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--foreground);
+    background-color: var(--background);
+  }
+
+  h1 {
+    font-size: 3em;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 2.25em;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 1.75em;
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
+
+@layer theme {
+  :root {
+    --background: #fff;
+    --foreground: #08080a;
+    --card: #fff;
+    --card-foreground: #08080a;
+    --popover: #fff;
+    --popover-foreground: #08080a;
+    --primary: #17171b;
+    --primary-foreground: #f9f9f9;
+    --secondary: #f4f4f5;
+    --secondary-foreground: #17171b;
+    --muted: #f4f4f5;
+    --muted-foreground: #71717a;
+    --accent: #f4f4f5;
+    --accent-foreground: #17171b;
+    --destructive: #e44;
+    --destructive-foreground: #f9f9f9;
+    --border: #e3e3e7;
+    --border-accent: #cfcfcf;
+    --input: #e3e3e7;
+    --ring: #17171b;
+    --transparent: transparent;
+    --z-index-overlay: 50;
+    --z-index-popup: 100;
+    --radius: 0.5rem;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 64px;
+  }
+
+  .dark {
+    --background: #08080a;
+    --foreground: #f9f9f9;
+    --card: #08080a;
+    --card-foreground: #f9f9f9;
+    --popover: #08080a;
+    --popover-foreground: #f9f9f9;
+    --primary: #f9f9f9;
+    --primary-foreground: #17171b;
+    --secondary: #27272a;
+    --secondary-foreground: #f9f9f9;
+    --secondary-hover: #45454c;
+    --muted: #27272a;
+    --muted-foreground: #a1a1a9;
+    --accent: #27272a;
+    --accent-foreground: #f9f9f9;
+    --destructive: #7f1d1d;
+    --destructive-foreground: #f9f9f9;
+    --border: #27272a;
+    --border-accent: #45454c;
+    --input: #27272a;
+    --ring: #d3d3d7;
+  }
+}

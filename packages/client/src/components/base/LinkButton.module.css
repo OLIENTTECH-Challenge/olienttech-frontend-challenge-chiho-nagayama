@@ -1,0 +1,20 @@
+.base {
+  padding: 12px;
+  font-size: 1em;
+  text-decoration: none;
+  border-radius: var(--radius);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.filled {
+  color: var(--primary-foreground);
+  background-color: var(--primary);
+}
+
+.outlined {
+  color: var(--primary);
+  border: var(--primary) 1px solid;
+}

@@ -1,0 +1,12 @@
+.stockCell {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.stockInput {
+  width: 60px;
+}
+
+.priceCell {
+  white-space: nowrap;
+}

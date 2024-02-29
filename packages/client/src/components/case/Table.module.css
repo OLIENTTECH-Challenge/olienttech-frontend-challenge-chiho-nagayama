@@ -1,0 +1,32 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+}
+
+.thead {
+  background-color: var(--muted);
+}
+
+.tr {
+  &[data-is-clickable='true']:hover {
+    cursor: pointer;
+    background-color: var(--muted);
+  }
+}
+
+.th {
+  height: 46px;
+  padding: 0 16px;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+}
+
+.tbody {
+  border: none;
+}
+
+.td {
+  padding: 16px;
+  border: 1px solid var(--border);
+}
