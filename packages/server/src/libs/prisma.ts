@@ -9,3 +9,4 @@ export const prisma = new PrismaClient().$extends(
     },
   }),
 );
+// export const prisma = new PrismaClient()
