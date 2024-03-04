@@ -17,3 +17,9 @@
   .logoutButton {
     margin-top: 12px;
   }
+
+  .linkCardWrapper {
+    cursor: pointer;
+
+    /* その他のスタイリング */
+  }
