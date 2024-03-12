@@ -1,13 +1,13 @@
-import type { Shop } from "../prisma-client-js";
-import type { Manufacturer } from "../prisma-client-js";
-import type { ShopOnManufacturer } from "../prisma-client-js";
-import type { Product } from "../prisma-client-js";
-import type { ManufacturerHandlingProducts } from "../prisma-client-js";
-import type { ProductCategory } from "../prisma-client-js";
-import type { ProductOnProductCategory } from "../prisma-client-js";
-import type { Order } from "../prisma-client-js";
-import type { OrderItem } from "../prisma-client-js";
-import { Prisma } from "../prisma-client-js";
+import type { Shop } from "@prisma/client";
+import type { Manufacturer } from "@prisma/client";
+import type { ShopOnManufacturer } from "@prisma/client";
+import type { Product } from "@prisma/client";
+import type { ManufacturerHandlingProducts } from "@prisma/client";
+import type { ProductCategory } from "@prisma/client";
+import type { ProductOnProductCategory } from "@prisma/client";
+import type { Order } from "@prisma/client";
+import type { OrderItem } from "@prisma/client";
+import { Prisma } from "@prisma/client";
 import { Resolver } from "@quramy/prisma-fabbrica/lib/internal";
 export { initialize, resetSequence, registerScalarFieldValueGenerator, resetScalarFieldValueGenerator } from "@quramy/prisma-fabbrica/lib/internal";
 type BuildDataOptions = {

@@ -1,12 +1,39 @@
-.stockCell {
+@layer base {
+  .main {
     display: flex;
-    gap: var(--spacing-xs);
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--card);
   }
 
-  .stockInput {
-    width: 60px;
+  /* テーブルのスタイリング */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card);
   }
 
-  .priceCell {
-    white-space: nowrap;
+  .table th, .table td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border: 1px solid var(--border);
   }
+
+  .table th {
+    color: var(--primary-foreground);
+    background-color: var(--primary);
+  }
+
+  .link {
+    font-weight: 600;
+    color: var(--foreground);
+    text-decoration: none;
+  }
+
+  .link:hover {
+    font-weight: 600;
+    color: var(--accent-foreground);
+    text-decoration: none; /* ホバー時の下線を除去 */
+  }
+}

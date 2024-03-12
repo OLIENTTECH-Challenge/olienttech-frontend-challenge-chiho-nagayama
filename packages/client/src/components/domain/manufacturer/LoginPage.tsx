@@ -1,9 +1,9 @@
-import styles from './LoginPage.module.css';
+import * as manufacturerApi from '@/api/manufacturer';
+import { Button } from '@/components/base/Button';
 import { TextInput } from '@/components/base/TextInput';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import * as manufacturerApi from '@/api/manufacturer';
-import { Button } from '@/components/base/Button';
+import styles from './LoginPage.module.css';
 
 export const ManufacturerLoginPage = () => {
   const navigate = useNavigate();
@@ -16,6 +16,9 @@ export const ManufacturerLoginPage = () => {
 
     const id = formData.get('id');
     const password = formData.get('password');
+
+    console.log('ID:', id);
+    console.log('Password:', password);
 
     if (typeof id === 'string' && typeof password === 'string') {
       void toast

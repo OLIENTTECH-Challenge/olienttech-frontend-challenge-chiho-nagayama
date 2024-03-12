@@ -1,7 +1,11 @@
 declare const styles:
-  & Readonly<{ "stockCell": string }>
-  & Readonly<{ "stockInput": string }>
-  & Readonly<{ "priceCell": string }>
+  & Readonly<{ "main": string }>
+  & Readonly<{ "table": string }>
+   
+   
+   
+  & Readonly<{ "link": string }>
+   
 ;
 export default styles;
 //# sourceMappingURL=./ManufacturerList.module.css.d.ts.map

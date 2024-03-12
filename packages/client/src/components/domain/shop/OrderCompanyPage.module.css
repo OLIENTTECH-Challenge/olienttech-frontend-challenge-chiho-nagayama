@@ -1,0 +1,27 @@
+/* OrderCompanyPage.module.css */
+@layer base {
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .companyTable {
+    width: 80%;
+    margin-top: var(--spacing-lg); /* 24pxに相当 */
+    border-collapse: collapse;
+  }
+
+  .companyTable th,
+  .companyTable td {
+    padding: var(--spacing-sm); /* 8pxに相当 */
+    border: 1px solid var(--border); /* 制約による境界線色 */
+  }
+
+  .companyTable th {
+    text-align: left;
+    background-color: var(--secondary); /* 制約によるセカンダリー背景色 */
+  }
+}

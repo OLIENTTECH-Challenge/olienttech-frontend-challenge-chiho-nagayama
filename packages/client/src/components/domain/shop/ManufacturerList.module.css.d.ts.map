@@ -1,1 +1,1 @@
-{"version":3,"sources":["./ManufacturerList.module.css"],"names":["stockCell","stockInput","priceCell"],"mappings":"AAAA;AAAA,E,aAAAA,W,WAAA;AAAA,E,aAKEC,Y,WALF;AAAA,E,aASEC,W,WATF;AAAA;AAAA","file":"ManufacturerList.module.css.d.ts","sourceRoot":""}
+{"version":3,"sources":["./ManufacturerList.module.css"],"names":["main","table","link"],"mappings":"AAAA;AAAA,E,aACAA,M,WADA;AAAA,E,aAUAC,O,WAVA;AAAA,E,aAgBAA,O,WAhBA;AAAA,E,aAgBWA,O,WAhBX;AAAA,E,aAuBAA,O,WAvBA;AAAA,E,aA4BAC,M,WA5BA;AAAA,E,aAkCAA,M,WAlCA;AAAA;AAAA","file":"ManufacturerList.module.css.d.ts","sourceRoot":""}

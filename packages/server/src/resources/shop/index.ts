@@ -52,23 +52,39 @@ app.openapi(
   async (c) => {
     const { id, password } = c.req.valid('json');
 
+    // IDによるユーザー検索開始をログに記録.
+    console.log(`Searching for shop with ID: ${id}`);
+
     const shopOnPrisma = await prisma.shop.findUnique({
       where: { id },
     });
     if (shopOnPrisma === null) {
+      // 検索結果をログに記録.
+      console.log(`Shop not found with ID: ${id}`);
       return c.jsonT(AppResponse.failure('Not found'), 404);
     }
+    //検索結果をログに記録.
+    else {
+      console.log(`Shop found: ${JSON.stringify(shopOnPrisma)}`);
+    }
 
-    // NOTE: 一旦パスワードは固定
+    // パスワード照合（ここではダミーのパスワード'hoge'を使用）.
+    console.log(`Verifying password for shop ID: ${id}`);
     if (password !== 'hoge') {
+      //.
+      console.log(`Password verification failed for shop ID: ${id}`);
       return c.jsonT(AppResponse.failure('Unauthorized'), 401);
     }
 
+    // トークンの生成と返却.
+    console.log(`Generating token for shop ID: ${id}`);
     const token = await sign({
       id,
       role: Role.Shop,
     });
 
+    //.
+    console.log(`Token generated: ${token}`);
     return c.jsonT(AppResponse.success({ token }));
   },
 );

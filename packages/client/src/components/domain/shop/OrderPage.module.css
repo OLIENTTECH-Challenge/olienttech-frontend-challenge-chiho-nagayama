@@ -1,0 +1,63 @@
+@layer base {
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: var(--spacing-md);
+  }
+
+  .productContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: calc(25% - var(--spacing-lg));
+    padding: var(--spacing-md);
+    margin: var(--spacing-md);
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+  }
+
+  .sub {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .square {
+    width: 80px;
+    height: 80px;
+    margin-left: var(--spacing-md);
+    background-color: var(--muted);
+  }
+
+  .title {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--foreground);
+    text-decoration: none;
+  }
+
+  /* 商品説明のスタイルを設定 */
+  .description {
+    margin-bottom: var(--spacing-sm); /* 10pxに相当 */
+    font-size: 0.9em;
+    color: var(--muted-foreground); /* 使用されるミュートされた前景色 */
+  }
+
+  /* 価格と在庫数のスタイルを設定 */
+  .price,
+  .stock {
+    margin-bottom: var(--spacing-xs); /* 5pxに相当 */
+    font-size: 0.9em;
+  }
+
+  .title:hover {
+    font-weight: 600; /* ホバー時も制約に従ったフォントウェイトを保持 */
+    color: var(--accent-foreground); /* ホバー時の色を制約に従って変更 */
+    text-decoration: none; /* ホバー時の下線を除去 */
+  }
+}
