@@ -27,7 +27,7 @@
 .productImage {
   width: 100px;
   height: 100px;
-  background-color: var(--background-product-image);
+  background-color: var(--border-accent);
 }
 
 .productDetails {
@@ -43,8 +43,20 @@
   font-size: 1em;
 }
 
+.productName:hover {
+  margin-bottom: 5px;
+  font-size: 1em;
+  background-color: var(--border-accent);
+}
+
 .stockInfo {
   font-size: 0.8em;
   color: var(--color-gray);
   background: transparent;
+}
+
+.square{
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-foreground);
 }

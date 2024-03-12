@@ -51,13 +51,12 @@
   /* 価格と在庫数のスタイルを設定 */
   .price,
   .stock {
-    margin-bottom: var(--spacing-xs); /* 5pxに相当 */
+    margin-bottom: var(--spacing-xs);
     font-size: 0.9em;
   }
 
   .title:hover {
-    font-weight: 600; /* ホバー時も制約に従ったフォントウェイトを保持 */
-    color: var(--accent-foreground); /* ホバー時の色を制約に従って変更 */
-    text-decoration: none; /* ホバー時の下線を除去 */
+    font-weight: 600;
+    color: var( --muted);
   }
 }

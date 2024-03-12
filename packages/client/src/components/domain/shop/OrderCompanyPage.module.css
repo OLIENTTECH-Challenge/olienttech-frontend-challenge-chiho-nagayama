@@ -20,6 +20,12 @@
     border: 1px solid var(--border); /* 制約による境界線色 */
   }
 
+  .companyTable td:hover {
+    padding: var(--spacing-sm);
+    color: var( --muted);
+    border: 1px solid var(--border);
+  }
+
   .companyTable th {
     text-align: left;
     background-color: var(--secondary); /* 制約によるセカンダリー背景色 */
