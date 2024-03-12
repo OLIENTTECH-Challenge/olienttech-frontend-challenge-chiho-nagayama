@@ -1,8 +1,16 @@
-import { useParams } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
 import styles from './OrderCompanyPage.module.css';
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 export const OrderCompanyPage = () => {
   const { productName } = useParams();
+  const query = useQuery();
+  const productId = query.get('productId');
+  const price = query.get('price');
+  const stock = query.get('stock');
   // 仮想的な会社情報のデータ配列
   const companies = [
     { id: 'C01', name: '会社A' },
@@ -30,7 +38,15 @@ export const OrderCompanyPage = () => {
           <tbody>
             {companies.map((company) => (
               <tr key={company.id}>
-                <td>{company.name}</td>
+                <td>
+                  <Link
+                    to={`/shop/orders/${encodeURIComponent(productName ?? '')}/${encodeURIComponent(
+                      company.name,
+                    )}?productId=${productId}&price=${price}&stock=${stock}`}
+                  >
+                    {company.name}
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>

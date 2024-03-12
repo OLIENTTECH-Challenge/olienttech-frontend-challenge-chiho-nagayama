@@ -18,9 +18,9 @@
   width: 300px;
   margin: 20px 10px;
   overflow: hidden;
-  background-color: var(--background-default);
-  border: 1px solid var(--border-default);
-  border-radius: 8px;
+  background-color: var(--card); /* Updated to use the card variable */
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
 }
 
@@ -35,28 +35,34 @@
   flex-direction: column;
   justify-content: center;
   width: 200px;
-  padding: 10px;
+  padding: var(--spacing-md);
 }
 
-.productName {
-  margin-bottom: 5px;
+.productName, .productDescription, .productPrice, .stockInfo {
+  margin-bottom: var(--spacing-sm);
   font-size: 1em;
 }
 
-.productName:hover {
-  margin-bottom: 5px;
-  font-size: 1em;
-  background-color: var(--border-accent);
+.productDescription, .productPrice {
+  font-size: 0.9em;
+  color: var(--muted-foreground);
 }
 
 .stockInfo {
   font-size: 0.8em;
-  color: var(--color-gray);
-  background: transparent;
+  color: var(--accent-foreground);
 }
 
-.square{
-  width: 80px;
-  height: 80px;
-  background-color: var(--primary-foreground);
+.orderLink {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  background-color: var(--secondary);
+  border-radius: var(--radius);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-hover);
+  }
 }

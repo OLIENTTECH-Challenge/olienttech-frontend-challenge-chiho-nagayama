@@ -50,7 +50,10 @@ export const OrderPage = () => {
       {selectedProducts.map((product) => (
         <div key={product.id} className={styles.productContainer}>
           <div className={styles.sub}>
-            <Link to={`/shop/orders/${product.name}`} className={styles.title}>
+            <Link
+              to={`/shop/orders/${product.name}?productId=${product.id}&price=${product.price}&stock=${product.stock}`}
+              className={styles.title}
+            >
               {product.name}
             </Link>
             <p className={styles.description}>{product.description}</p>

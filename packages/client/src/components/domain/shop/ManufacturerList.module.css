@@ -28,12 +28,12 @@
   .link {
     font-weight: 600;
     color: var(--foreground);
-    text-decoration: none;
+
   }
 
   .link:hover {
     font-weight: 600;
     color: var( --muted);
-    text-decoration: none; /* ホバー時の下線を除去 */
+
   }
 }

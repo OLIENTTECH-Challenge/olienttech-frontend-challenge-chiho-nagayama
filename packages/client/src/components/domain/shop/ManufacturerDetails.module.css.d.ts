@@ -5,9 +5,13 @@ declare const styles:
   & Readonly<{ "productImage": string }>
   & Readonly<{ "productDetails": string }>
   & Readonly<{ "productName": string }>
+  & Readonly<{ "productDescription": string }>
+   
+  & Readonly<{ "productPrice": string }>
    
   & Readonly<{ "stockInfo": string }>
-  & Readonly<{ "square": string }>
+   
+  & Readonly<{ "orderLink": string }>
 ;
 export default styles;
 //# sourceMappingURL=./ManufacturerDetails.module.css.d.ts.map

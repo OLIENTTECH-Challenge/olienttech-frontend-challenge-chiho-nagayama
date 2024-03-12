@@ -14,6 +14,7 @@ import ManufacturerDetails from './pages/shop/manufacturerDetails';
 import ManufacturerList from './pages/shop/manufacturerList';
 import OrderPage from './pages/shop/order';
 import OrderCompanyPage from './pages/shop/orderCompany';
+import RequestPage from './pages/shop/request';
 ('./pages/shop/manufacturerDetails');
 
 const router = createBrowserRouter([
@@ -39,6 +40,8 @@ const router = createBrowserRouter([
       { path: '/shop/orders', element: <OrderPage />, loader: shopAuthLoader }, // ここに追加
       { path: '/shop/manufacturers/:name', element: <ManufacturerDetails />, loader: shopAuthLoader },
       { path: '/shop/orders/:productName', element: <OrderCompanyPage />, loader: shopAuthLoader },
+      { path: '/shop/manufacturers/:companyName/:productId', element: <RequestPage />, loader: shopAuthLoader },
+      { path: '/shop/orders/:productName/:companyName', element: <RequestPage />, loader: shopAuthLoader },
       { path: '/shop/login', element: <ShopLoginPage /> },
     ],
   },
