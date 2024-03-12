@@ -1,4 +1,3 @@
-/* OrderCompanyPage.module.css */
 @layer base {
   .main {
     display: flex;
@@ -12,22 +11,37 @@
     width: 80%;
     margin-top: var(--spacing-lg); /* 24pxに相当 */
     border-collapse: collapse;
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%); /* 影を追加 */
   }
 
   .companyTable th,
   .companyTable td {
-    padding: var(--spacing-sm); /* 8pxに相当 */
+    padding: var(--spacing-md); /* 16pxに相当 */
+    text-align: left;
     border: 1px solid var(--border); /* 制約による境界線色 */
   }
 
+  .companyTable td {
+    transition: background-color 0.3s ease; /* スムーズな背景色の変化 */
+  }
+
   .companyTable td:hover {
-    padding: var(--spacing-sm);
-    color: var( --muted);
-    border: 1px solid var(--border);
+    background-color: var(--muted); /* ホバー時の背景色変化 */
   }
 
   .companyTable th {
-    text-align: left;
+    font-weight: bold; /* タイトルの太字 */
     background-color: var(--secondary); /* 制約によるセカンダリー背景色 */
+  }
+
+  .companyTable a {
+    color: var(--primary); /* リンクの色 */
+    text-decoration: none; /* 下線を削除 */
+    transition: color 0.3s ease; /* スムーズな色の変化 */
+  }
+
+  .companyTable a:hover {
+    color: var(--accent); /* ホバー時のリンクの色変化 */
+    text-decoration: underline; /* ホバー時に下線を追加 */
   }
 }

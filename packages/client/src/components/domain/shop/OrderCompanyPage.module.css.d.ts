@@ -5,6 +5,9 @@ declare const styles:
    
    
    
+   
+   
+   
 ;
 export default styles;
 //# sourceMappingURL=./OrderCompanyPage.module.css.d.ts.map
