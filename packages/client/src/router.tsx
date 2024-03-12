@@ -1,14 +1,21 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { manufacturerAuthLoader } from './loader';
+import { manufacturerAuthLoader, shopAuthLoader } from './loader';
 import HomePage from './pages';
-import ManufacturerLoginPage from './pages/manufacturer/login';
-import ManufacturerProductListPage from './pages/manufacturer/products';
 import ManufacturerHomePage from './pages/manufacturer';
 import ManufacturerLayout from './pages/manufacturer/layout';
-import ManufacturerOrderListPage from './pages/manufacturer/orders';
+import ManufacturerLoginPage from './pages/manufacturer/login';
 import ManufacturerOrderPage from './pages/manufacturer/order';
-import ShopLayout from './pages/shop/layout';
+import ManufacturerOrderListPage from './pages/manufacturer/orders';
+import ManufacturerProductListPage from './pages/manufacturer/products';
 import ShopHomePage from './pages/shop';
+import ShopLayout from './pages/shop/layout';
+import ShopLoginPage from './pages/shop/login';
+import ManufacturerDetails from './pages/shop/manufacturerDetails';
+import ManufacturerList from './pages/shop/manufacturerList';
+import OrderPage from './pages/shop/order';
+import OrderCompanyPage from './pages/shop/orderCompany';
+import RequestPage from './pages/shop/request';
+('./pages/shop/manufacturerDetails');
 
 const router = createBrowserRouter([
   {
@@ -27,7 +34,16 @@ const router = createBrowserRouter([
   },
   {
     element: <ShopLayout />,
-    children: [{ path: '/shop', element: <ShopHomePage /> }],
+    children: [
+      { path: '/shop', element: <ShopHomePage />, loader: shopAuthLoader },
+      { path: '/shop/manufacturers', element: <ManufacturerList />, loader: shopAuthLoader }, // ここに追加
+      { path: '/shop/orders', element: <OrderPage />, loader: shopAuthLoader }, // ここに追加
+      { path: '/shop/manufacturers/:name', element: <ManufacturerDetails />, loader: shopAuthLoader },
+      { path: '/shop/orders/:productName', element: <OrderCompanyPage />, loader: shopAuthLoader },
+      { path: '/shop/manufacturers/:companyName/:productId', element: <RequestPage />, loader: shopAuthLoader },
+      { path: '/shop/orders/:productName/:companyName', element: <RequestPage />, loader: shopAuthLoader },
+      { path: '/shop/login', element: <ShopLoginPage /> },
+    ],
   },
 ]);
 

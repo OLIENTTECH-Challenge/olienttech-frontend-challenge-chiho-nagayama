@@ -1,0 +1,39 @@
+@layer base {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background-color: var(--card);
+  }
+
+  /* テーブルのスタイリング */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--card);
+  }
+
+  .table th, .table td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+
+  .table th {
+    color: var(--primary-foreground);
+    background-color: var(--primary);
+  }
+
+  .link {
+    font-weight: 600;
+    color: var(--foreground);
+
+  }
+
+  .link:hover {
+    font-weight: 600;
+    color: var( --muted);
+
+  }
+}

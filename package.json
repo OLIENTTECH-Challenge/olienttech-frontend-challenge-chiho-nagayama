@@ -18,7 +18,6 @@
     "format": "run-p format:*",
     "format:prettier": "prettier . -w",
     "format:eslint": "eslint . --report-unused-disable-directives --max-warnings 0 --fix",
-    "format:stylelint": "stylelint '**/*.css' --fix",
     "lint": "run-p lint:*",
     "lint:tsc": "pnpm -F !@olienttech/tsconfig exec tsc --noEmit",
     "lint:prettier": "prettier . --check",
@@ -53,7 +52,7 @@
     "typescript": "^5.0.2"
   },
   "volta": {
-    "node": "20.9.0",
+    "node": "20.11.1",
     "pnpm": "8.10.5"
   }
 }
